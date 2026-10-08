@@ -1,0 +1,32 @@
+@import "tailwindcss";
+.dynamic-bg {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(48, 166, 221, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(134, 17, 145, 0.18),
+      transparent 30%
+    ),
+    #230724;
+
+  background-size: 200% 200%;
+  animation: moveBackground 12s ease-in-out infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
